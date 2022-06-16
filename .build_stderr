@@ -1,0 +1,58 @@
+/chos/userland/apps/lab5/lab5_stdio.c: In function 'fwrite':
+/chos/userland/apps/lab5/lab5_stdio.c:144:31: warning: passing argument 2 of 'ipc_set_msg_data' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  144 |     ipc_set_msg_data(ipc_msg, src, sizeof(struct fs_request), cnt + 1);
+      |                               ^~~
+In file included from /chos/userland/apps/lab5/lab5_stdio.h:18,
+                 from /chos/userland/apps/lab5/lab5_stdio.c:13:
+/chos/userland/../libchcore/_install/include/chcore/ipc.h:66:53: note: expected 'void *' but argument is of type 'const void *'
+   66 | int ipc_set_msg_data(struct ipc_msg *ipc_msg, void *data, u64 offset, u64 len);
+      |                                               ~~~~~~^~~~
+/chos/userland/apps/lab5/lab5_stdio.c: In function 'fscanf':
+/chos/userland/apps/lab5/lab5_stdio.c:210:18: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  210 |     char* leaf = fmt;
+      |                  ^~~
+/chos/userland/apps/lab5/lab5_stdio.c: In function 'fprintf':
+/chos/userland/apps/lab5/lab5_stdio.c:252:18: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  252 |     char* leaf = fmt;
+      |                  ^~~
+222 blocks
+/chos/userland/servers/tmpfs/tmpfs.c: In function 'tfs_namex':
+/chos/userland/servers/tmpfs/tmpfs.c:229:8: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  229 |   find = *name;
+      |        ^
+/chos/userland/servers/tmpfs/tmpfs_ops.c: In function 'tmpfs_mkdir':
+/chos/userland/servers/tmpfs/tmpfs_ops.c:124:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  124 |  char *leaf = path;
+      |               ^~~~
+/chos/userland/servers/tmpfs/tmpfs_ops.c:130:26: warning: passing argument 2 of 'tfs_namex' from incompatible pointer type [-Wincompatible-pointer-types]
+  130 |  err = tfs_namex(&dirat, &leaf, 1);
+      |                          ^~~~~
+      |                          |
+      |                          char **
+In file included from /chos/userland/servers/tmpfs/tmpfs_ops.c:24:
+/chos/userland/servers/tmpfs/tmpfs.h:46:50: note: expected 'const char **' but argument is of type 'char **'
+   46 | int tfs_namex(struct inode **dirat, const char **name, int mkdir_p);
+      |                                     ~~~~~~~~~~~~~^~~~
+222 blocks
+/chos/kernel/ipc/connection.c: In function 'sys_ipc_call':
+/chos/kernel/ipc/connection.c:580:1: warning: label 'out_obj_put' defined but not used [-Wunused-label]
+  580 | out_obj_put:
+      | ^~~~~~~~~~~
+/chos/kernel/object/cap_group.c: In function 'create_root_cap_group':
+/chos/kernel/object/cap_group.c:285:13: warning: assignment to 'struct cap_group *' from incompatible pointer type 'u64 *' {aka 'long long unsigned int *'} [-Wincompatible-pointer-types]
+  285 |   cap_group = object->opaque;
+      |             ^
+/chos/kernel/object/thread.c: In function 'load_binary':
+/chos/kernel/object/thread.c:120:1: warning: label 'out_free_cap' defined but not used [-Wunused-label]
+  120 | out_free_cap:
+      | ^~~~~~~~~~~~
+/chos/kernel/sched/policy_rr.c: In function 'rr_sched_choose_thread':
+/chos/kernel/sched/policy_rr.c:109:19: warning: passing argument 1 of 'list_empty' from incompatible pointer type [-Wincompatible-pointer-types]
+  109 |   if (!list_empty(&rr_ready_queue_meta[cpu_id])) {
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                   |
+      |                   struct queue_meta *
+In file included from /chos/kernel/sched/policy_rr.c:17:
+/chos/kernel/include/common/list.h:49:49: note: expected 'struct list_head *' but argument is of type 'struct queue_meta *'
+   49 | static inline bool list_empty(struct list_head *head)
+      |                               ~~~~~~~~~~~~~~~~~~^~~~

@@ -1,0 +1,479 @@
+make[1]: Entering directory '/home/hjk/Desktop/chcore-lab'
+[1mCleaning...[0m
+[1mNothing to clean[0m
+[1mConfiguring CMake...[0m
+loading initial cache file scripts/build/cmake/LoadConfigAsk.cmake
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CHCORE_CROSS_COMPILE: aarch64-linux-gnu-
+-- CHCORE_FSM_TEST: ON
+-- CHCORE_KERNEL_DEBUG: OFF
+-- CHCORE_KERNEL_TEST: ON
+-- CHCORE_LAB3_TEST: OFF
+-- CHCORE_PLAT: raspi3
+-- CHCORE_ROOT_PROGRAM: procm.srv
+-- CHCORE_SHELL_TEST: ON
+-- CHCORE_TMPFS_TEST: ON
+-- CHCORE_USER_DEBUG: OFF
+-- CHCORE_VERBOSE_BUILD: OFF
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /chos/build
+[0;32m[1mConfig syned to `.config` file.[0m
+[1mBuilding...[0m
+Scanning dependencies of target userland-clean-incbin
+Scanning dependencies of target libchcore
+Scanning dependencies of target kernel-clean-incbin
+[  4%] Creating directories for 'libchcore'
+[  4%] Built target userland-clean-incbin
+[  4%] Built target kernel-clean-incbin
+[  8%] No download step for 'libchcore'
+[ 12%] No patch step for 'libchcore'
+[ 16%] No update step for 'libchcore'
+[ 20%] Performing configure step for 'libchcore'
+loading initial cache file /chos/build/libchcore-prefix/tmp/libchcore-cache-.cmake
+-- CHCORE_PROJECT_DIR: /chos
+-- CHCORE_PROJECT_DIR: /chos
+-- The C compiler identification is GNU 9.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /chos/libchcore/_build
+[ 25%] Performing build step for 'libchcore'
+Scanning dependencies of target chcore_crt0
+Scanning dependencies of target chcore_objects
+[ 11%] Building C object CMakeFiles/chcore_objects.dir/src/capability/capability.c.o
+[ 11%] Building C object CMakeFiles/chcore_objects.dir/src/console/base.c.o
+[ 17%] Building C object CMakeFiles/chcore_objects.dir/src/fs/tmpfs.c.o
+[ 23%] Building C object CMakeFiles/chcore_objects.dir/src/fs/fakefs.c.o
+[ 29%] Building C object CMakeFiles/chcore_objects.dir/src/env/__libchcore_init.c.o
+[ 35%] Building C object CMakeFiles/chcore_objects.dir/src/console/printf.c.o
+[ 41%] Building C object CMakeFiles/chcore_objects.dir/src/fs/fsm.c.o
+[ 41%] Built target chcore_crt0
+[ 47%] Building C object CMakeFiles/chcore_objects.dir/src/internal/server_caps.c.o
+[ 52%] Building C object CMakeFiles/chcore_objects.dir/src/ipc/ipc.c.o
+[ 58%] Building C object CMakeFiles/chcore_objects.dir/src/libc/string.c.o
+[ 64%] Building C object CMakeFiles/chcore_objects.dir/src/libc/malloc.c.o
+[ 70%] Building C object CMakeFiles/chcore_objects.dir/src/memory/pmo.c.o
+[ 76%] Building C object CMakeFiles/chcore_objects.dir/src/memory/vaddr.c.o
+[ 82%] Building C object CMakeFiles/chcore_objects.dir/src/procm/spawn.c.o
+[ 88%] Building C object CMakeFiles/chcore_objects.dir/src/sync/spin.c.o
+[ 94%] Building C object CMakeFiles/chcore_objects.dir/src/thread/create.c.o
+[ 94%] Built target chcore_objects
+Scanning dependencies of target chcore
+[100%] Linking C static library libchcore.a
+[100%] Built target chcore
+[ 29%] Performing install step for 'libchcore'
+[ 94%] Built target chcore_objects
+[ 94%] Built target chcore_crt0
+[100%] Built target chcore
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /chos/libchcore/_install/lib/libchcore.a
+-- Installing: /chos/libchcore/_install/include/chcore
+-- Installing: /chos/libchcore/_install/include/chcore/console.h
+-- Installing: /chos/libchcore/_install/include/chcore/capability.h
+-- Installing: /chos/libchcore/_install/include/chcore/procm.h
+-- Installing: /chos/libchcore/_install/include/chcore/memory.h
+-- Installing: /chos/libchcore/_install/include/chcore/assert.h
+-- Installing: /chos/libchcore/_install/include/chcore/thread.h
+-- Installing: /chos/libchcore/_install/include/chcore/ipc.h
+-- Installing: /chos/libchcore/_install/include/chcore/fsm.h
+-- Installing: /chos/libchcore/_install/include/chcore/types.h
+-- Installing: /chos/libchcore/_install/include/chcore/tmpfs.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs
+-- Installing: /chos/libchcore/_install/include/chcore/fs/list.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/error.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/fcntl.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/defs.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/bug.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/fs_defs.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/radix.h
+-- Installing: /chos/libchcore/_install/include/chcore/fs/hashtable.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal
+-- Installing: /chos/libchcore/_install/include/chcore/internal/utils.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/idman.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/mem_layout.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/syscall_num.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/server_caps.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/raw_syscall.h
+-- Installing: /chos/libchcore/_install/include/chcore/fakefs.h
+-- Up-to-date: /chos/libchcore/_install/include/chcore
+-- Installing: /chos/libchcore/_install/include/chcore/types_arch.h
+-- Installing: /chos/libchcore/_install/include/chcore/endian_arch.h
+-- Up-to-date: /chos/libchcore/_install/include/chcore/internal
+-- Installing: /chos/libchcore/_install/include/chcore/internal/syscall_arch.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/crt0_arch.h
+-- Installing: /chos/libchcore/_install/include/chcore/internal/mem_layout_arch.h
+-- Installing: /chos/libchcore/_install/include/libc
+-- Installing: /chos/libchcore/_install/include/libc/malloc.h
+-- Installing: /chos/libchcore/_install/include/libc/memory.h
+-- Installing: /chos/libchcore/_install/include/libc/string.h
+-- Installing: /chos/libchcore/_install/include/libc/sys
+-- Installing: /chos/libchcore/_install/include/libc/sys/stat.h
+-- Installing: /chos/libchcore/_install/include/libc/sys/types.h
+-- Installing: /chos/libchcore/_install/include/libc/math.h
+-- Installing: /chos/libchcore/_install/include/libc/stdio.h
+-- Installing: /chos/libchcore/_install/include/libc/errno.h
+-- Installing: /chos/libchcore/_install/include/libc/endian.h
+-- Installing: /chos/libchcore/_install/include/sync
+-- Installing: /chos/libchcore/_install/include/sync/spin.h
+-- Installing: /chos/libchcore/_install/lib/crt0.o
+[ 33%] Completed 'libchcore'
+[ 33%] Built target libchcore
+Scanning dependencies of target userland
+[ 37%] Creating directories for 'userland'
+[ 41%] No download step for 'userland'
+[ 45%] No patch step for 'userland'
+[ 50%] No update step for 'userland'
+[ 54%] Performing configure step for 'userland'
+loading initial cache file /chos/build/userland-prefix/tmp/userland-cache-.cmake
+-- CHCORE_PROJECT_DIR: /chos
+-- CHCORE_PROJECT_DIR: /chos
+-- The C compiler identification is GNU 9.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /chos/userland/_build
+[ 58%] Performing build step for 'userland'
+Scanning dependencies of target helloworld.bin
+Scanning dependencies of target ipc_client.bin
+Scanning dependencies of target putget.bin
+Scanning dependencies of target lab5.bin
+[  1%] Building C object apps/lab5/CMakeFiles/helloworld.bin.dir/helloworld.c.o
+Scanning dependencies of target user.bin
+Scanning dependencies of target fsm.srv
+Scanning dependencies of target shell.srv
+Scanning dependencies of target fakefs.srv
+[  2%] Building C object apps/lab3/CMakeFiles/putget.bin.dir/putget.c.o
+[  3%] Building C object apps/lab4/CMakeFiles/ipc_client.bin.dir/ipc_client.c.o
+[  4%] Building C object apps/lab4/CMakeFiles/user.bin.dir/user.c.o
+[  5%] Building C object apps/lab5/CMakeFiles/lab5.bin.dir/lab5_main.c.o
+[  7%] Building C object servers/shell/CMakeFiles/shell.srv.dir/main.c.o
+[  8%] Building C object servers/fakefs/CMakeFiles/fakefs.srv.dir/main.c.o
+[  9%] Building C object servers/fsm/CMakeFiles/fsm.srv.dir/main.c.o
+[ 10%] Linking C executable helloworld.bin
+[ 11%] Linking C executable putget.bin
+[ 13%] Building C object servers/fakefs/CMakeFiles/fakefs.srv.dir/fakefs_ops.c.o
+[ 14%] Linking C executable user.bin
+[ 15%] Building C object apps/lab5/CMakeFiles/lab5.bin.dir/lab5_stdio.c.o
+[ 15%] Built target helloworld.bin
+[ 17%] Linking C executable ipc_client.bin
+[ 17%] Building C object servers/shell/CMakeFiles/shell.srv.dir/shell.c.o
+[ 17%] Built target putget.bin
+Scanning dependencies of target hello.bin
+[ 19%] Building C object servers/fsm/CMakeFiles/fsm.srv.dir/mount_info.c.o
+[ 19%] Built target user.bin
+[ 20%] Building C object servers/fsm/CMakeFiles/fsm.srv.dir/fsm.c.o
+[ 21%] Building C object apps/lab3/CMakeFiles/hello.bin.dir/hello.c.o
+[ 22%] Building C object servers/shell/CMakeFiles/shell.srv.dir/shell_test.c.o
+[ 22%] Built target ipc_client.bin
+Scanning dependencies of target fault.bin
+[ 23%] Building C object servers/fakefs/CMakeFiles/fakefs.srv.dir/__/fs_base/fs_wrapper_ops.c.o
+[ 25%] Building C object apps/lab3/CMakeFiles/fault.bin.dir/fault1.c.o
+[ 26%] Linking C executable hello.bin
+[ 27%] Building C object servers/fakefs/CMakeFiles/fakefs.srv.dir/__/fs_base/fs_wrapper.c.o
+[ 28%] Linking C executable lab5.bin
+[ 29%] Linking C executable fsm.srv
+Scanning dependencies of target badinst2.bin
+[ 30%] Linking C executable shell.srv
+[ 32%] Building C object apps/lab3/CMakeFiles/badinst2.bin.dir/badinst2.c.o
+[ 33%] Linking C executable fault.bin
+[ 33%] Built target hello.bin
+[ 33%] Built target lab5.bin
+[ 34%] Building C object servers/fakefs/CMakeFiles/fakefs.srv.dir/__/fs_base/fs_vnode.c.o
+[ 34%] Built target fsm.srv
+Scanning dependencies of target badinst1.bin
+Scanning dependencies of target yield_multi_aff.bin
+[ 34%] Built target shell.srv
+[ 35%] Building C object apps/lab3/CMakeFiles/badinst1.bin.dir/badinst1.c.o
+Scanning dependencies of target test_mutex.bin
+Scanning dependencies of target test_sem.bin
+[ 36%] Building C object apps/lab4/CMakeFiles/yield_multi_aff.bin.dir/yield_multi_aff.c.o
+[ 36%] Built target fault.bin
+[ 38%] Linking C executable badinst2.bin
+[ 39%] Building C object apps/lab4/CMakeFiles/test_mutex.bin.dir/test_mutex.c.o
+Scanning dependencies of target yield_single.bin
+[ 40%] Building C object apps/lab4/CMakeFiles/test_sem.bin.dir/test_sem.c.o
+Scanning dependencies of target yield_aff.bin
+[ 41%] Building C object apps/lab4/CMakeFiles/yield_single.bin.dir/yield_single.c.o
+[ 42%] Linking C executable badinst1.bin
+[ 44%] Linking C executable fakefs.srv
+[ 45%] Building C object apps/lab4/CMakeFiles/yield_aff.bin.dir/yield_aff.c.o
+[ 46%] Linking C executable yield_multi_aff.bin
+[ 46%] Built target badinst2.bin
+[ 46%] Built target badinst1.bin
+[ 47%] Linking C executable test_sem.bin
+[ 48%] Building C object apps/lab4/CMakeFiles/test_mutex.bin.dir/mutex.c.o
+[ 48%] Built target fakefs.srv
+Scanning dependencies of target prodcons.bin
+[ 50%] Linking C executable yield_single.bin
+Scanning dependencies of target yield_multi.bin
+Scanning dependencies of target yield_spin.bin
+[ 51%] Linking C executable yield_aff.bin
+[ 52%] Building C object apps/lab4/CMakeFiles/prodcons.bin.dir/prodcons.c.o
+[ 53%] Building C object apps/lab4/CMakeFiles/yield_spin.bin.dir/yield_spin.c.o
+[ 53%] Built target yield_multi_aff.bin
+[ 54%] Building C object apps/lab4/CMakeFiles/yield_multi.bin.dir/yield_multi.c.o
+[ 54%] Built target test_sem.bin
+[ 55%] Building C object apps/lab4/CMakeFiles/prodcons.bin.dir/prodcons_impl.c.o
+[ 55%] Built target yield_single.bin
+[ 57%] Linking C executable test_mutex.bin
+Scanning dependencies of target ramdisk.cpio
+[ 58%] Building C object apps/lab4/CMakeFiles/prodcons.bin.dir/buf.c.o
+[ 59%] Linking C executable yield_spin.bin
+[ 59%] Built target yield_aff.bin
+[ 59%] Built target ramdisk.cpio
+[ 60%] Linking C executable yield_multi.bin
+[ 60%] Built target test_mutex.bin
+[ 60%] Built target yield_spin.bin
+Scanning dependencies of target tmpfs.srv
+[ 61%] Linking C executable prodcons.bin
+[ 63%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/tmpfs.c.o
+[ 64%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/cpio.c.o
+[ 65%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/tmpfs_ops.c.o
+[ 66%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/main.c.o
+[ 67%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/__/fs_base/fs_wrapper_ops.c.o
+[ 69%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/__/fs_base/fs_wrapper.c.o
+[ 69%] Built target yield_multi.bin
+[ 69%] Built target prodcons.bin
+[ 70%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/__/fs_base/fs_vnode.c.o
+[ 71%] Building C object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/tmpfs_test.c.o
+[ 72%] Building ASM object servers/tmpfs/CMakeFiles/tmpfs.srv.dir/incbin_ramdisk.S.o
+[ 73%] Linking C executable tmpfs.srv
+[ 73%] Built target tmpfs.srv
+Scanning dependencies of target lab4.bin
+Scanning dependencies of target procm.srv
+[ 75%] Building C object servers/procm/CMakeFiles/lab4.bin.dir/elf.c.o
+[ 76%] Building C object servers/procm/CMakeFiles/lab4.bin.dir/lab4.c.o
+[ 77%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_userproc_elf.S.o
+[ 78%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_ipc_client_elf.S.o
+[ 80%] Building C object servers/procm/CMakeFiles/lab4.bin.dir/spawn.c.o
+[ 80%] Building C object servers/procm/CMakeFiles/procm.srv.dir/main.c.o
+[ 82%] Building C object servers/procm/CMakeFiles/lab4.bin.dir/launch.c.o
+[ 83%] Building C object servers/procm/CMakeFiles/procm.srv.dir/elf.c.o
+[ 84%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_fsm_elf.S.o
+[ 85%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_tmpfs_elf.S.o
+[ 86%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_shell_elf.S.o
+[ 88%] Building C object servers/procm/CMakeFiles/procm.srv.dir/launch.c.o
+[ 89%] Building ASM object servers/procm/CMakeFiles/lab4.bin.dir/incbin_fakefs_elf.S.o
+[ 90%] Building C object servers/procm/CMakeFiles/procm.srv.dir/spawn.c.o
+[ 91%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_userproc_elf.S.o
+[ 92%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_ipc_client_elf.S.o
+[ 94%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_tmpfs_elf.S.o
+[ 95%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_fsm_elf.S.o
+[ 96%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_shell_elf.S.o
+[ 97%] Building ASM object servers/procm/CMakeFiles/procm.srv.dir/incbin_fakefs_elf.S.o
+[ 98%] Linking C executable lab4.bin
+[100%] Linking C executable procm.srv
+[100%] Built target lab4.bin
+[100%] Built target procm.srv
+[ 62%] Performing install step for 'userland'
+[  2%] Built target helloworld.bin
+[  7%] Built target shell.srv
+[ 10%] Built target lab5.bin
+[ 15%] Built target ipc_client.bin
+[ 17%] Built target fsm.srv
+[ 20%] Built target user.bin
+[ 27%] Built target fakefs.srv
+[ 29%] Built target putget.bin
+[ 32%] Built target badinst2.bin
+[ 34%] Built target fault.bin
+[ 36%] Built target badinst1.bin
+[ 39%] Built target hello.bin
+[ 41%] Built target test_sem.bin
+[ 44%] Built target yield_multi_aff.bin
+[ 46%] Built target yield_single.bin
+[ 50%] Built target test_mutex.bin
+[ 52%] Built target yield_aff.bin
+[ 57%] Built target prodcons.bin
+[ 59%] Built target yield_multi.bin
+[ 61%] Built target yield_spin.bin
+[ 61%] Built target ramdisk.cpio
+[ 73%] Built target tmpfs.srv
+[ 86%] Built target procm.srv
+[100%] Built target lab4.bin
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /chos/userland/_install/lab4.bin
+-- Installing: /chos/userland/_install/procm.srv
+-- Installing: /chos/userland/_install/badinst1.bin
+-- Installing: /chos/userland/_install/badinst2.bin
+-- Installing: /chos/userland/_install/fault.bin
+-- Installing: /chos/userland/_install/hello.bin
+-- Installing: /chos/userland/_install/putget.bin
+-- Installing: /chos/userland/_install/user.bin
+-- Installing: /chos/userland/_install/ipc_client.bin
+-- Installing: /chos/userland/_install/test_mutex.bin
+-- Installing: /chos/userland/_install/test_sem.bin
+-- Installing: /chos/userland/_install/prodcons.bin
+-- Installing: /chos/userland/_install/yield_single.bin
+-- Installing: /chos/userland/_install/yield_aff.bin
+-- Installing: /chos/userland/_install/yield_multi_aff.bin
+-- Installing: /chos/userland/_install/yield_multi.bin
+-- Installing: /chos/userland/_install/yield_spin.bin
+[ 66%] Completed 'userland'
+[ 66%] Built target userland
+Scanning dependencies of target kernel
+[ 70%] Creating directories for 'kernel'
+[ 75%] No download step for 'kernel'
+[ 79%] No patch step for 'kernel'
+[ 83%] No update step for 'kernel'
+[ 87%] Performing configure step for 'kernel'
+loading initial cache file /chos/build/kernel-prefix/tmp/kernel-cache-.cmake
+-- CHCORE_PROJECT_DIR: /chos
+-- CHCORE_USER_INSTALL_DIR: /chos/userland/_install
+-- CHCORE_PROJECT_DIR: /chos
+-- CHCORE_USER_INSTALL_DIR: /chos/userland/_install
+-- The C compiler identification is GNU 9.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_TOOLCHAIN_FILE: /chos/scripts/build/cmake/Toolchains/kernel.cmake
+-- CMAKE_MODULE_PATH: /chos/scripts/build/cmake/Modules
+-- CMAKE_CROSSCOMPILING: TRUE
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- CMAKE_SYSTEM_NAME: Generic
+-- CMAKE_HOST_SYSTEM_PROCESSOR: x86_64
+-- CMAKE_HOST_SYSTEM_NAME: Linux
+-- CMAKE_BUILD_TYPE: Release
+-- CMAKE_ASM_COMPILER: /usr/bin/aarch64-linux-gnu-gcc
+-- CMAKE_C_COMPILER: /usr/bin/aarch64-linux-gnu-gcc
+-- CMAKE_C_OUTPUT_EXTENSION: .obj
+-- CMAKE_LINKER: /usr/bin/aarch64-linux-gnu-ld
+-- CMAKE_SOURCE_DIR: /chos/kernel
+-- CMAKE_BINARY_DIR: /chos/kernel/_build
+-- CMAKE_PREFIX_PATH: 
+-- CMAKE_INSTALL_PREFIX: /chos/build
+-- CHCORE_ARCH: aarch64
+-- CHCORE_CROSS_COMPILE: aarch64-linux-gnu-
+-- CHCORE_FSM_TEST: ON
+-- CHCORE_KERNEL_DEBUG: OFF
+-- CHCORE_KERNEL_TEST: ON
+-- CHCORE_LAB3_TEST: OFF
+-- CHCORE_PLAT: raspi3
+-- CHCORE_PROJECT_DIR: /chos
+-- CHCORE_ROOT_PROGRAM: procm.srv
+-- CHCORE_SHELL_TEST: ON
+-- CHCORE_TMPFS_TEST: ON
+-- CHCORE_USER_DEBUG: OFF
+-- CHCORE_USER_INSTALL_DIR: /chos/userland/_install
+-- CHCORE_VERBOSE_BUILD: OFF
+-- init_objects: CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/start.S.obj;CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/mmu.c.obj;CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/tools.S.obj;CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/init_c.c.obj;CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/peripherals/uart.c.obj
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /chos/kernel/_build
+[ 91%] Performing build step for 'kernel'
+Scanning dependencies of target linker.ld
+[  0%] Built target linker.ld
+Scanning dependencies of target kernel.img
+[  1%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/head.S.obj
+[  3%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/start.S.obj
+[  4%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/tools.S.obj
+[  8%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/main.c.obj
+[  6%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/mmu.c.obj
+[  9%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/init_c.c.obj
+[ 11%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/init/tools.S.obj
+[ 12%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/boot/raspi3/peripherals/uart.c.obj
+[ 14%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/irq/ipi.c.obj
+[ 16%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/irq/irq_entry.c.obj
+[ 17%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/irq/irq_entry.S.obj
+[ 19%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/irq/pgfault.c.obj
+[ 20%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/irq/irq.S.obj
+[ 22%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/machine/pmu.c.obj
+[ 24%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/machine/smp.c.obj
+[ 25%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/cache.c.obj
+[ 27%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/mm/memcpy.S.obj
+[ 29%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/memset.c.obj
+[ 30%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/mm/memmove.S.obj
+[ 32%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/mm/page_table.S.obj
+[ 33%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/tlb.c.obj
+[ 35%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/page_table.c.obj
+[ 37%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/uaccess.c.obj
+[ 38%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/mm/vmspace.c.obj
+[ 40%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/sched/context.c.obj
+[ 41%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/sched/sched.c.obj
+[ 43%] Building ASM object CMakeFiles/kernel.img.dir/arch/aarch64/sched/idle.S.obj
+[ 45%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/sync/ticket.c.obj
+[ 46%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/plat/raspi3/uart/uart.c.obj
+[ 48%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/plat/raspi3/irq/irq.c.obj
+[ 50%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/plat/raspi3/mm/mmparse.c.obj
+[ 51%] Building C object CMakeFiles/kernel.img.dir/arch/aarch64/plat/raspi3/irq/timer.c.obj
+[ 53%] Building C object CMakeFiles/kernel.img.dir/ipc/connection.c.obj
+[ 54%] Building C object CMakeFiles/kernel.img.dir/semaphore/semaphore.c.obj
+[ 56%] Building C object CMakeFiles/kernel.img.dir/irq/ipi.c.obj
+[ 58%] Building C object CMakeFiles/kernel.img.dir/irq/timer.c.obj
+[ 59%] Building C object CMakeFiles/kernel.img.dir/lib/printk.c.obj
+[ 61%] Building C object CMakeFiles/kernel.img.dir/lib/elf.c.obj
+[ 62%] Building C object CMakeFiles/kernel.img.dir/lib/radix.c.obj
+[ 64%] Building C object CMakeFiles/kernel.img.dir/mm/buddy.c.obj
+[ 66%] Building C object CMakeFiles/kernel.img.dir/mm/mm_check.c.obj
+[ 67%] Building C object CMakeFiles/kernel.img.dir/mm/kmalloc.c.obj
+[ 69%] Building C object CMakeFiles/kernel.img.dir/mm/mm.c.obj
+[ 70%] Building C object CMakeFiles/kernel.img.dir/mm/slab.c.obj
+[ 72%] Building C object CMakeFiles/kernel.img.dir/mm/vmregion.c.obj
+[ 74%] Building C object CMakeFiles/kernel.img.dir/mm/pgfault_handler.c.obj
+[ 75%] Building C object CMakeFiles/kernel.img.dir/object/cap_group.c.obj
+[ 77%] Building C object CMakeFiles/kernel.img.dir/object/memory.c.obj
+[ 79%] Building C object CMakeFiles/kernel.img.dir/object/capability.c.obj
+[ 80%] Building C object CMakeFiles/kernel.img.dir/object/set_thread_env.c.obj
+[ 82%] Building C object CMakeFiles/kernel.img.dir/object/thread.c.obj
+[ 83%] Building C object CMakeFiles/kernel.img.dir/sched/sched.c.obj
+[ 85%] Building C object CMakeFiles/kernel.img.dir/sched/context.c.obj
+[ 87%] Building C object CMakeFiles/kernel.img.dir/sched/policy_rr.c.obj
+[ 88%] Building C object CMakeFiles/kernel.img.dir/syscall/syscall.c.obj
+[ 90%] Building C object CMakeFiles/kernel.img.dir/tests/tests.c.obj
+[ 91%] Building C object CMakeFiles/kernel.img.dir/tests/tst_mutex.c.obj
+[ 93%] Building C object CMakeFiles/kernel.img.dir/tests/tst_malloc.c.obj
+[ 95%] Building C object CMakeFiles/kernel.img.dir/tests/tst_sched.c.obj
+[ 96%] Building C object CMakeFiles/kernel.img.dir/tests/barrier.c.obj
+[ 98%] Building ASM object CMakeFiles/kernel.img.dir/incbin_root.S.obj
+[100%] Linking C executable kernel.img
+[100%] Built target kernel.img
+Scanning dependencies of target kernel8.img
+[100%] Built target kernel8.img
+[ 95%] Performing install step for 'kernel'
+[  0%] Built target linker.ld
+[100%] Built target kernel.img
+[100%] Built target kernel8.img
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /chos/build/kernel.img
+-- Installing: /chos/build/kernel8.img
+-- Installing: /chos/build/emulate.sh
+-- Installing: /chos/build/simulate.sh
+[100%] Completed 'kernel'
+[100%] Built target kernel
+[0;32m[1mSucceeded to build all targets[0m
+make[1]: Leaving directory '/home/hjk/Desktop/chcore-lab'
