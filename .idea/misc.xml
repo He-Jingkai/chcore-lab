@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/README.md" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="232" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/docs/实验 0：环境搭建.md" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="17" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/docs/reports/lab4.md" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2896" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/docs/实验 4：多核多进程调度与IPC.md" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>
